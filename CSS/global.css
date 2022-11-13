@@ -21,6 +21,7 @@ body {
 .main-header {
     position: fixed;
     width: 100%;
+    padding: 0.8rem;
 }
 
 .main-header > .main-nav {
@@ -31,11 +32,12 @@ body {
 
 .main-header > .main-nav ul {
     list-style: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .main-header > .main-nav ul li {
     text-decoration: none;
-    display: inline;
 }
 
 .main-header > .main-nav ul li > a {
