@@ -24,7 +24,11 @@ body {
 .main-header {
     position: fixed;
     width: 100%;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 4rem; /* inline padding needs to be a variable in the future for responsiveness and to be the same for the <hr> */
+}
+
+hr {
+    margin-inline: 4rem;
 }
 
 .main-header .main-nav {
