@@ -12,11 +12,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--clr-accent-light);
 }
 
 body {
     font-family: "Prompt", sans-serif;
-    background: var(--clr-body-gradient);
+    background-image: var(--clr-body-gradient);
+    background-color: hsl(0 0% 0% / 20%);
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -57,4 +60,50 @@ hr {
 
 .main-header .main-nav i {
     font-size: calc(var(--nav-items-size) + var(--nav-items-sizePlus));
+}
+
+.hero-section {
+    height: 90vh;
+    gap: 3rem;
+}
+
+.hero-section,
+.hero-section .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .texts h1 {
+    font-size: 3.5rem;
+}
+
+.hero-section .texts p {
+    font-size: 1.2rem;
+}
+
+.hero-section .cards {
+    display: inherit;
+    gap: 3rem;
+}
+
+.hero-section .cards .card {
+    width: 11rem;
+    height: 7.5rem;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: linear-gradient(135deg, rgb(256 256 256 / .65), rgb(256 256 256 / .1));
+    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
+    border-radius: 15px;
+}
+
+/* text styles need to be fixed */
+.hero-section .cards .card p,
+.hero-section .cards .card i {
+    color: rgb(256 256 256 / .8);
+    text-shadow: 3px 3px 3px rgb(0 0 0 / .5);
 }
