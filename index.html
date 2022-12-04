@@ -23,30 +23,32 @@
     </header>
     
     <div class="hero-section">
-        <section class="texts">
-            <h1>Pitiks</h1>
-            <p>Pop-up photography service in STI ORCA.</p>
+        <section class="main-info">
+            <div class="texts">
+                <h1>Pitiks</h1>
+                <p>Pop-up photography service in STI ORCA.</p>
+            </div>
+
+            <button class="cta-btn" type="button" onclick="location.href='/PAGES/SERVICES/index.html'">Services</button>
         </section>
 
-        <section class="cards">
+        <section class="support-info">
             <!-- All data below are estimates -->
-            <div class="card">
+            <div class="info">
                 <i class="fa-solid fa-image"></i>
                 <p>2,000 photos taken</p>
             </div>
             
-            <div class="card">
+            <div class="info">
                 <i class="fa-solid fa-camera"></i>
                 <p>Over 100 sessions</p>
             </div>
             
-            <div class="card">
+            <div class="info">
                 <i class="fa-solid fa-users"></i>
                 <p>30 satisfied customers</p>
             </div>
         </section>
-        
-        <button class="cta-btn" type="button" onclick="location.href='/PAGES/SERVICES/index.html'">Services</button>
     </div>
 
     <hr>
@@ -60,16 +62,24 @@
 
     <!-- https://fireart.studio/ possible footer inspiration. contact form above the footer, either pop-up form or direct depending on the page, while maintaining the contact information in the footer. -->
 
-    <form action="">
-        <label for="name-input">Name:</label>
-        <input type="text" id="name-input">
+    <div class="form-section">
+        <div class="texts">
+            <h2>Contact Us</h2>
+            <p>For feedback, ideas, and work outside of our provided services.</p>
+        </div>
+        
+        <form action="">
+            <label for="name-input">Name:</label>
+            <input type="text" id="name-input">
+    
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input">
+    
+            <label for="msg-input">Message:</label>
+            <input type="text" id="msg-input">
+        </form>
+    </div>
 
-        <label for="email-input">Email:</label>
-        <input type="email" id="email-input">
-
-        <label for="msg-input">Message:</label>
-        <input type="text" id="msg-input">
-    </form>
 
     <footer>
 

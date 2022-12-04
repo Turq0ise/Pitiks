@@ -72,27 +72,50 @@ hr {
 
 .hero-section {
     height: 90vh;
-    gap: 3rem;
+    gap: 6.5rem;
 }
 
-.hero-section,
-.hero-section .texts {
+.hero-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.hero-section .texts h1 {
+.hero-section .main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.hero-section .main-info .texts h1 {
     font-size: 3.5rem;
 }
 
-.hero-section .texts p {
+.hero-section .main-info .texts p {
     font-size: 1.2rem;
 }
 
-.hero-section .cards {
+.hero-section .main-info .cta-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: fit-content;
+    padding: 1rem 2.5rem;
+
+    cursor: pointer;
+
+    background-color: rgb(256 256 256 / .3);
+    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.hero-section .support-info {
     display: inherit;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     gap: 3.5rem;
     padding: 3.2rem;
     background-color: rgb(256 256 256 / .3);
@@ -101,24 +124,22 @@ hr {
     border-radius: 15px;
 }
 
-.hero-section .cards .card {
+.hero-section .support-info .info {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
     text-align: center;
-    width: 33%;
 }
 
 /* text styles need to be fixed */
-.hero-section .cards .card i {
+.hero-section .support-info .info i {
     font-size: 1.5rem;
 }
 
-.cta-btn {
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    font-weight: 600;
 
-    cursor: pointer;
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
