@@ -33,9 +33,11 @@ body {
 }
 
 .main-header {
+    z-index: 99;
     position: fixed;
     width: 100%;
     padding: 1.5rem 4rem; /* inline padding needs to be a variable in the future for responsiveness and to be the same for the <hr> */
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.6), transparent);
 }
 
 hr {
@@ -142,64 +144,99 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-inline: 5rem;
-}
-
-.about-section .carousel-section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 70vh;
+    margin: 5rem;
     /* margin-inline: 5rem; */
 }
 
-.about-section .carousel-section .carousel,
-.about-section .carousel-section .info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-}
+.about-section h2 {font-size: 2.6rem;}
+.about-section p {font-size: 1.1rem;}
 
-.about-section .carousel-section .carousel .images {
-    display: flex;
-    justify-content: center;
-    width: 45%;
-    background-color: rgb(256 256 256 / .3);
-    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    padding: 0.5rem;
-}
 
-.about-section .carousel-section .carousel .images .image-card {
-    height: 22rem;
-    width: fit-content;
-    margin: 0;
-}
-
-.about-section .carousel-section .carousel .images .image-card img {
-    height: 100%;
-    border-radius: 15px;
-}
-
-.about-section .carousel-section .buttons {
+.form-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    /* padding-inline: 5rem; */
+    background-color: #495a46;
+    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
+    border-radius: 15px 15px 0 0;
+    backdrop-filter: blur(5px);
 }
 
-.about-section .carousel-section .buttons button {
+.form-section .form-container  {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-section .form-container .texts {
+    
+}
+
+.form-section .form-container .texts h2 {
+    font-size: 2.6rem;
+}
+
+.form-section .form-container .texts p {
+    font-size: 1.1rem;
+}
+
+.form-section .form-container form .form-items {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+}
+
+.form-section .form-container form .form-items .form-item {
+    position: relative;
+}
+
+.form-section .form-container form .form-items .form-item label {
+    position: absolute;
+    top: 0.4rem;
+    left: calc(0.4rem + 1.5px);
+    z-index: 1;
+    padding-inline: 5px;
+    background-color: #495a46;
+
+    animation: normal ease-in-out 5ms;
+}
+
+.form-section .form-container form .form-items .form-item input,
+.form-section .form-container form .form-items .form-item textarea {
     border: none;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 1.5px solid #fff;
+    /* box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);  */
+    border-radius: 5px;
+    padding: 0.4rem;
+    position: relative;
+}
+
+.form-section .form-container form .form-items .form-item:nth-child(3) textarea {
+    height: 7rem;
+    width: 25rem;
+    resize: none;
+    font-family: "Prompt", sans-serif;
+}
+
+.form-section .form-container form button[type="submit"] {
+    border: none;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+
+    cursor: pointer;
+
     background-color: rgb(256 256 256 / .3);
+    border-radius: 15px;
+}
+
+.form-section .form-container form button[type="submit"]:hover {
     box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
     backdrop-filter: blur(5px);
-    border-radius: 15px;
-    /* padding: 3rem; */
-    aspect-ratio: 1 / 1;
-    width: 10rem;
-}
-
-.about-section .carousel-section .buttons i {
-    font-size: 3.5rem;
 }

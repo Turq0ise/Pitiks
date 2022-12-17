@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/global.css">
-    <script src="/JS/global.js"></script>
+    <script src="/JS/global.js" defer></script>
     <script src="https://kit.fontawesome.com/e00005890a.js" crossorigin="anonymous"></script>
     <title>Pitiks</title>
 </head>
 <body>
     <header class="main-header">
         <nav class="main-nav">
-            <img src="MEDIA/logo.svg" alt="Pitiks Logo">
+            <img src="/MEDIA/logo.svg" alt="Pitiks Logo">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Services</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="/PAGES/PORTFOLIO/">Portfolio</a></li>
+                <li><a href="/PAGES/SERVICES/">Services</a></li>
             </ul>
             <i class="fa fa-shopping-cart"></i>
         </nav>
@@ -56,74 +56,43 @@
     <div class="about-section">
         <h2>About Us</h2>
         <p>Short explanation, maybe one paragraph, then the rest would be in the portfolio page.</p>
-        <div class="carousel-section">
-            <div class="carousel">
-                <div class="images">
-                    <!-- <div class="image-card">
-                        <img src="/MEDIA/sample-imgs/main-cards/IMG_0264.JPG" alt="" class="vertical-img">
-                    </div> -->
-                    <!-- <div class="image-card">
-                        <img src="/MEDIA/sample-imgs/main-cards/IMG_0340.JPG" alt="" class="vertical-img">
-                    </div> -->
-                    <!-- <div class="image-card">
-                        <img src="/MEDIA/sample-imgs/main-cards/IMG_0606.JPG" alt="" class="horizontal-img">
-                    </div> -->
-                    <div class="image-card">
-                        <img src="/MEDIA/sample-imgs/main-cards/IMG_0608.JPG" alt="" class="horizontal-img">
-                    </div>
-                    <!-- <div class="image-card">
-                        <img src="/MEDIA/sample-imgs/main-cards/IMG_0707.JPG" alt="" class="vertical-img">
-                    </div> -->
-                </div>
-
-                <div class="buttons">
-                    <button><i class="fa-solid fas fa-angle-right"></i></button>
-                    <button><i class="fa-solid fas fa-angle-left"></i></button>
-                </div>
-            </div>
-
-            <div class="info">
-                <div class="texts">
-                    <h3>test title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-
-                <div class="status">
-                    <div class="dot-btn"></div>
-                    <div class="dot-btn"></div>
-                    <div class="dot-btn"></div>
-                    <div class="dot-btn"></div>
-                    <div class="dot-btn"></div>
-                </div>
-            </div>
-        </div>
     </div>
-
-    <hr>
 
     <!-- https://fireart.studio/ possible footer inspiration. contact form above the footer, either pop-up form or direct depending on the page, while maintaining the contact information in the footer. -->
 
     <div class="form-section">
-        <div class="texts">
-            <h2>Contact Us</h2>
-            <p>For feedback, ideas, and work outside of our provided services.</p>
-        </div>
-        
-        <form action="">
-            <label for="name-input">Name:</label>
-            <input type="text" id="name-input">
-    
-            <label for="email-input">Email:</label>
-            <input type="email" id="email-input">
-    
-            <label for="msg-input">Message:</label>
-            <input type="text" id="msg-input">
-        </form>
-    </div>
+        <div class="form-container">
+            <div class="texts">
+                <h2>Contact Us</h2>
+                <p>For feedback, ideas, and work outside of our provided services.</p>
+            </div>
+            
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeN13pTeG5vCuI2JHNnQYT8wBLTdhCjmmzYvZ5NkWuqJmb7zg/formResponse" id="contact-form">
+                <div class="form-items">
+                    <div class="form-item">
+                        <label for="name-input">Name:</label>
+                        <input type="text" id="name-input" name="entry.641130522" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="email-input">Email:</label>
+                        <input type="email" id="email-input" name="entry.1112616577" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="msg-input">Message:</label>
+                        <textarea type="text" id="msg-input" name="entry.6547883" required></textarea>
+                    </div>
+                </div>
 
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
 
     </footer>
 </body>
 </html>
+
