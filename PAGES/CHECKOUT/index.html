@@ -13,11 +13,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/MEDIA/favicon/favicon-black/favicon-16x16.png" media="(prefers-color-scheme:light)">
     <link rel="manifest" href="/MEDIA/favicon/favicon-black/site.webmanifest" media="(prefers-color-scheme:light)">
     <link rel="stylesheet" href="/CSS/global.css">
-    <link rel="stylesheet" href="/CSS/page-specific/cart.css">
+    <link rel="stylesheet" href="/CSS/page-specific/checkout.css">
     <script src="/JS/global.js" defer></script>
-    <script src="/JS/page-specific/cart.js" defer></script>
+    <script src="/JS/page-specific/checkout.js" defer></script>
     <script src="https://kit.fontawesome.com/e00005890a.js" crossorigin="anonymous"></script>
-    <title>Pitiks - Cart</title>
+    <title>Pitiks - Checkout</title>
 </head>
 <body>
     <header class="main-header">
@@ -28,27 +28,20 @@
                 <li><a href="/PAGES/ABOUT/">About Us</a></li>
                 <li><a href="/PAGES/SERVICES/">Services</a></li>
             </ul>
-            <a href="#"><i class="fa fa-shopping-cart" data-cart></i></a>
+            <a href="/PAGES/CART/"><i class="fa fa-shopping-cart" data-cart></i></a>
         </nav>
     </header>
     <div class="content-section">
         <div class="main">
-            <h1>Cart</h1>
+            <h1>Checkout</h1>
         </div>
 
-        <div class="cart">
-            <div class="cart-items" id="cart-items">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfsvEok5gjGWneCyKjqpgFEZ503ORR0L4H9-SNZpG4bk8Dk_Q/formResponse" class="checkout" id="checkout-form">
+            <div class="checkout-items" id="checkout-items">
             </div>
-
-            <form method="GET" class="cart-options" id="cart-options">
-                <h2 id="total-price" data-total-price></h2>
-                <div id="email-container">
-                    <label for="checkout-email">Email:</label>
-                    <input type="email" name="" id="checkout-email" required>
-                </div>
-                <button type="submit">Checkout</button>
-            </form>
-        </div>
+            <div class="checkout-details" id="checkout-details">
+            </div>
+        </form>
     </div>
 </body>
 </html>
