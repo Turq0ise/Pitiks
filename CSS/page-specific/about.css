@@ -1,0 +1,52 @@
+.content-section .works-section h2 {
+    padding-inline: 5rem;
+}
+
+.content-section .works-section .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.content-section .works-section .image-grid .column {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 25%;
+    max-width: 25%;
+}
+
+.content-section .works-section .image-grid .column .image-wrapper {
+    overflow: hidden;
+    background-color: #000;
+}
+
+.content-section .works-section .image-grid .column .image-wrapper img {
+    width: 100%;
+    vertical-align: middle;
+    background-color: rgb(0 0 0);
+    transition: all 0.2s ease-in-out;
+}
+
+.content-section .works-section .image-grid:has(.image-grid-item:hover) .image-grid-item:not(.image-grid-item:hover) {
+    opacity: 0.2;
+}
+
+.content-section .works-section .image-grid:has(.image-grid-item:hover) .image-grid-item:hover {
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 900px) {
+    .content-section .works-section .image-grid .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-section .works-section .image-grid .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

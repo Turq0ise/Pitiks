@@ -4,12 +4,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/MEDIA/favicon/favicon-white/apple-touch-icon.png" media="(prefers-color-scheme:dark)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/MEDIA/favicon/favicon-white/favicon-32x32.png" media="(prefers-color-scheme:dark)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/MEDIA/favicon/favicon-white/favicon-16x16.png" media="(prefers-color-scheme:dark)">
+    <link rel="manifest" href="/MEDIA/favicon/favicon-white/site.webmanifest" media="(prefers-color-scheme:dark)">
+    <link rel="apple-touch-icon" sizes="180x180" href="/MEDIA/favicon/favicon-black/apple-touch-icon.png" media="(prefers-color-scheme:light)">
+    <link rel="icon" type="image/png" sizes="32x32" href="/MEDIA/favicon/favicon-black/favicon-32x32.png" media="(prefers-color-scheme:light)">
+    <link rel="icon" type="image/png" sizes="16x16" href="/MEDIA/favicon/favicon-black/favicon-16x16.png" media="(prefers-color-scheme:light)">
+    <link rel="manifest" href="/MEDIA/favicon/favicon-black/site.webmanifest" media="(prefers-color-scheme:light)">
     <link rel="stylesheet" href="/CSS/global.css">
-    <script src="/JS/global.js"></script>
+    <link rel="stylesheet" href="/CSS/page-specific/services.css">
+    <script src="/JS/global.js" defer></script>
+    <script src="/JS/page-specific/services.js" defer></script>
     <script src="https://kit.fontawesome.com/e00005890a.js" crossorigin="anonymous"></script>
     <title>Pitiks - Services</title>
 </head>
 <body>
-    
+    <header class="main-header">
+        <nav class="main-nav">
+            <img src="/MEDIA/logo.svg" alt="Pitiks Logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/PAGES/ABOUT/">About Us</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+            <a href="/PAGES/CART/"><i class="fa fa-shopping-cart" data-cart></i></a>
+        </nav>
+    </header>
+
+    <div class="content-section">
+        <div class="main">
+            <h1>Services</h1>
+        </div>
+
+        <div class="services">
+            <div class="card">
+                <div class="info">
+                    <h2>Solo Package</h2>
+                    <p>4 Photos</p>
+                </div>
+
+                <hr>
+
+                <p id="price-solo" data-price=""></p>
+
+                <hr>
+
+                <div class="buttons">
+                    <div class="count-buttons">
+                        <button onclick="decrementAmount('solo')">-</button>
+                        <p id="amount-solo" data-amount="1"></p>
+                        <button onclick="incrementAmount('solo')">+</button>
+                    </div>
+                    <div class="main-buttons">
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('solo')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h2>Group Package</h2>
+                    <p>9 Photos</p>
+                </div>
+
+                <hr>
+
+                <p id="price-group" data-price=""></p>
+
+                <hr>
+
+                <div class="buttons">
+                    <div class="count-buttons">
+                        <button onclick="decrementAmount('group')">-</button>
+                        <p id="amount-group" data-amount="1"></p>
+                        <button onclick="incrementAmount('group')">+</button>
+                    </div>
+                    <div class="main-buttons">
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('group')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h2>Section Package</h2>
+                    <p>14 Photos</p>
+                </div>
+
+                <hr>
+
+                <p id="price-section" data-price=""></p>
+
+                <hr>
+
+                <div class="buttons">
+                    <div class="count-buttons">
+                        <button onclick="decrementAmount('section')">-</button>
+                        <p id="amount-section" data-amount="1"></p>
+                        <button onclick="incrementAmount('section')">+</button>
+                    </div>
+                    <div class="main-buttons">
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('section')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <h2>Additional Photo</h2>
+                    <p>1 Photo</p>
+                </div>
+
+                <hr>
+
+                <p id="price-additional" data-price=""></p>
+
+                <hr>
+
+                <div class="buttons">
+                    <div class="count-buttons">
+                        <button onclick="decrementAmount('additional')">-</button>
+                        <p id="amount-additional" data-amount="1"></p>
+                        <button onclick="incrementAmount('additional')">+</button>
+                    </div>
+                    <div class="main-buttons">
+                        <button>Buy Now</button>
+                        <button onclick="addToCart('additional')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <div class="form-container">
+            <div class="texts">
+                <h2>Contact Us</h2>
+                <p>For feedback, ideas, and work outside of our provided services.</p>
+            </div>
+            
+            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeN13pTeG5vCuI2JHNnQYT8wBLTdhCjmmzYvZ5NkWuqJmb7zg/formResponse" id="contact-form">
+                <div class="form-items">
+                    <div class="form-item">
+                        <label for="name-input">Name:</label>
+                        <input type="text" id="name-input" name="entry.641130522" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="email-input">Email:</label>
+                        <input type="email" id="email-input" name="entry.1112616577" required>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="msg-input">Message:</label>
+                        <textarea type="text" id="msg-input" name="entry.6547883" required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
