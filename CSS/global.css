@@ -7,6 +7,8 @@
 
     --nav-items-size: 1.1rem;
     --nav-items-sizePlus: 6px;
+
+    --global-inline-container: clamp(1rem, 5.5vw, 20rem);
 }
 
 * {
@@ -40,12 +42,12 @@ body {
     z-index: 99;
     position: fixed;
     width: 100%;
-    padding: 1.5rem 4rem; /* inline padding needs to be a variable in the future for responsiveness and to be the same for the <hr> */
+    padding: 1.5rem var(--global-inline-container);
     background: linear-gradient(180deg, rgb(0 0 0 / 0.6), transparent);
 }
 
 hr {
-    margin-inline: 4rem;
+    margin-inline: var(--global-inline-container);
     border: none;
     border: 1px solid white;
     border-radius: 100%;
@@ -95,68 +97,73 @@ hr {
     font-size: calc((var(--nav-items-size) + var(--nav-items-sizePlus)) / 2);
 }
 
-.hero-section {
-    height: 90vh;
-    gap: 6.5rem;
+.main-header .phone-nav {
+    display: none;
+}
+
+.main-header .phone-nav .top {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(0 0 0 / 0.6), transparent);
+    padding: 1.5rem var(--global-inline-container);
 }
 
-.hero-section .main-info {
+.main-header .phone-nav .top img {
+    width: calc(var(--nav-items-size) + var(--nav-items-sizePlus));
+}
+
+.main-header .phone-nav .top a i {
+    font-size: calc(var(--nav-items-size) + var(--nav-items-sizePlus));
+}
+
+.main-header .phone-nav .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--clr-accent-light);
+}
+
+.main-header .phone-nav .bottom ul {
     display: flex;
-    flex-direction: column;
-    gap: 2.8rem;
+    justify-content: space-evenly;
 }
 
-.hero-section .main-info .cta-btn {
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    width: fit-content;
-    padding: 1rem 2.5rem;
-
-    cursor: pointer;
-
-    background-color: rgb(256 256 256 / .3);
-    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-}
-
-.hero-section .support-info {
-    display: inherit;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    gap: 3.5rem;
-    padding: 3.2rem;
-    background-color: rgb(256 256 256 / .3);
-    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-}
-
-.hero-section .support-info .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+.main-header .phone-nav .bottom ul li {
+    list-style: none;
+    height: 8vh;
+    width: 33vw;
     text-align: center;
+    line-height: 8vh;
+    border-right: 2px solid #495a46;
 }
 
-/* text styles need to be fixed */
-.hero-section .support-info .info i {
-    font-size: 1.5rem;
+.main-header .phone-nav .bottom ul li:last-child {
+    border: none;
 }
 
-.about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 5rem;
-    /* margin-inline: 5rem; */
+.main-header .phone-nav .bottom ul li a {
+    /* color: var(--clr-accent-light);  */
+    color: #495a46;
+    text-decoration: none;
+    font-size: var(--nav-items-size);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+    .main-header {
+        padding: 0;
+        background: none;
+    }
+
+    .main-header .main-nav {
+        display: none;
+    }
+
+    .main-header .phone-nav {
+        display: block;
+    }
 }
 
 .form-section {
@@ -164,8 +171,7 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem;
-    /* padding-inline: 5rem; */
+    padding: 5rem var(--global-inline-container);
     background-color: #495a46;
     box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
     border-radius: 15px 15px 0 0;
@@ -179,7 +185,7 @@ hr {
 }
 
 .form-section .form-container form .form-items {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -215,7 +221,7 @@ hr {
 
 .form-section .form-container form .form-items .form-item:nth-child(3) textarea {
     height: 7rem;
-    width: 25rem;
+    width: 100%;
     resize: none;
     font-family: "Prompt", sans-serif;
 }
@@ -236,6 +242,16 @@ hr {
     backdrop-filter: blur(5px);
 }
 
+@media screen and (min-width: 480px) {
+    .form-section .form-container form .form-items {
+        width: 60%;
+    }
+
+    .form-section .form-container form .form-items .form-item:nth-child(3) textarea {
+        width: 25rem;
+    }
+}   
+
 .content-section {
     padding-block: 8rem;
     display: flex;
@@ -244,14 +260,13 @@ hr {
 }
 
 .content-section .main {
-    padding-inline: 5rem;
+    padding-inline: var(--global-inline-container);
     width: 75%;
 }
 
 [data-price]::before {
     content: "₱" attr(data-price) ".00";
 }
-
 
 [data-amount]::before {
     content: attr(data-amount);

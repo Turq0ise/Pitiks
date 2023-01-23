@@ -1,5 +1,5 @@
 .content-section .works-section h2 {
-    padding-inline: 5rem;
+    padding-inline: var(--global-inline-container);
 }
 
 .content-section .works-section .image-grid {
