@@ -1,0 +1,75 @@
+.hero-section {
+    height: 90vh;
+    gap: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--global-inline-container);
+}
+
+.hero-section .main-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.hero-section .main-info .cta-btn {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: fit-content;
+    padding: 1rem 2.5rem;
+
+    cursor: pointer;
+
+    background-color: rgb(256 256 256 / .3);
+    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.hero-section .support-info {
+    display: inherit;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3.5rem;
+    padding: min(4.5%, 3.2rem);
+    background-color: rgb(256 256 256 / .3);
+    box-shadow: 3px 3px 24px -1px rgb(0 0 0 / .25);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.hero-section .support-info .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+}
+
+/* text styles need to be fixed */
+.hero-section .support-info .info i {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 790px) {
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-section .support-info {
+        flex-direction: row;
+    }
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 5rem var(--global-inline-container);
+    /* margin-inline: 5rem; */
+}

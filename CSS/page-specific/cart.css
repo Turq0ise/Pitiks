@@ -1,7 +1,7 @@
 .content-section .cart {
     display: flex;
     gap: 3rem;
-    margin-inline: 5rem;
+    margin-inline: var(--global-inline-container);
 }
 
 .content-section .cart .cart-items {
